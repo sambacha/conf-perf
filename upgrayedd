@@ -1,0 +1,1 @@
+alias upgrayedd='/usr/sbin/pkg upgrade && echo "" && /usr/sbin/pkg autoremove && echo "" && /usr/sbin/pkg audit -F ; echo "" && env PAGER=cat freebsd-update fetch install; /usr/sbin/pkg clean -ay; for i in /var/db/freebsd-update/files/* ; do rm "$i"; done'

@@ -1,0 +1,7 @@
+## Only allow these file types to document root
+   location / {
+     if ($request_uri ~* (^\/|\.html|\.jpg|\.org|\.png|\.css|favicon\.ico|robots\.txt)$ ) {
+       break;
+     }
+     return 444;
+   }
